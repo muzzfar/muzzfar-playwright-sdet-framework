@@ -1,38 +1,12 @@
 {
-    "name": "playwright-test-automation-framework",
-    "version": "2.0.0",
-    "description": "Hybrid Playwright TypeScript Framework customized by Muzzfar Yaseen Akhoon (Senior SDET)",
-    "main": "index.js",
-    "scripts": {
-        "clean:allure": "powershell -Command \"Remove-Item -Recurse -Force allure-results,allure-report -ErrorAction SilentlyContinue\"",
-
-        "test": "npx playwright test",
-        "test:smoke": "npm run clean:allure && npx playwright test --grep @smoke",
-        "test:regression": "npm run clean:allure && npx playwright test --grep @regression",
-        "test:headed": "npx playwright test --headed",
-
-        "smoke": "npm run test:smoke",
-        "regression": "npm run test:regression",
-
-        "allure:generate": "allure generate allure-results --clean -o allure-report",
-        "allure:open": "allure open allure-report",
-        "allure:report": "npm run allure:generate && npm run allure:open",
-        "docker:build": "docker build -t muzzfar-playwright-framework .",
-        "docker:test": "docker run --rm muzzfar-playwright-framework"
-    },
-    "keywords": [],
-    "author": "Muzzfar Yaseen Akhoon <muzfaryaseen1113@gmail.com> ",
-    "license": "ISC",
-    "devDependencies": {
-        "@playwright/test": "^1.57.0",
-        "@types/node": "^25.0.3",
-        "allure-commandline": "^2.36.0",
-        "allure-playwright": "^3.4.3"
-    },
-    "dependencies": {
-        "dotenv": "^17.2.3"
-    },
-    "directories": {
-        "test": "tests"
-    }
+  "name": "muzzfar-playwright-sdet-framework",
+  "version": "2.0.0",
+  "description": "Hybrid Playwright TypeScript Framework heavily customized by Muzzfar Yaseen Akhoon (Senior SDET - 6.5+ years)",
+  "author": "Muzzfar Yaseen Akhoon <muzfaryaseen1113@gmail.com>",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "docker:build": "docker build -t muzzfar-playwright-framework .",
+    "docker:test": "docker run --rm muzzfar-playwright-framework"
+  }
 }
