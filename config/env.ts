@@ -3,7 +3,7 @@ dotenv.config();
 
 type EnvironmentType = 'staging' | 'production';
 
-const CURRENT_ENV = (process.env.ENVIRONMENT as EnvironmentType) || 'production';
+const CURRENT_ENV = (process.env.ENVIRONMENT as EnvironmentType) || 'staging';
 
 const ENV_CONFIG = {
     staging: {

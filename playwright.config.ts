@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { defineConfig } from '@playwright/test';
 import { ENV } from './config/env';
 import { BROWSER_CONFIG } from './config/browser';

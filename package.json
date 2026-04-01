@@ -1,7 +1,7 @@
 {
     "name": "playwright-test-automation-framework",
-    "version": "1.0.0",
-    "description": "",
+    "version": "2.0.0",
+    "description": "Hybrid Playwright TypeScript Framework customized by Muzzfar Yaseen Akhoon (Senior SDET)",
     "main": "index.js",
     "scripts": {
         "clean:allure": "powershell -Command \"Remove-Item -Recurse -Force allure-results,allure-report -ErrorAction SilentlyContinue\"",
@@ -16,10 +16,12 @@
 
         "allure:generate": "allure generate allure-results --clean -o allure-report",
         "allure:open": "allure open allure-report",
-        "allure:report": "npm run allure:generate && npm run allure:open"
+        "allure:report": "npm run allure:generate && npm run allure:open",
+        "docker:build": "docker build -t muzzfar-playwright-framework .",
+        "docker:test": "docker run --rm muzzfar-playwright-framework"
     },
     "keywords": [],
-    "author": "",
+    "author": "Muzzfar Yaseen Akhoon <muzfaryaseen1113@gmail.com> ",
     "license": "ISC",
     "devDependencies": {
         "@playwright/test": "^1.57.0",
